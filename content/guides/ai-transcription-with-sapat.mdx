@@ -1,0 +1,48 @@
+---
+title: "Building a Versatile AI Transcription Tool with SAPAT"
+description: "A comprehensive guide for AI engineers on setting up and using SAPAT for audio transcription with OpenAI, Groq, local Whisper, and Google Cloud Speech-to-Text."
+date: "2024-07-30"
+author: "Your Name" # Replace with your name
+tags: ["AI", "Transcription", "Speech-to-Text", "OpenAI", "Groq", "Whisper", "Google Cloud", "Python", "CLI"]
+---
+
+import { Callout } from 'nextra-theme-docs'
+
+# Building a Versatile AI Transcription Tool with SAPAT
+
+In the rapidly evolving field of AI, transcribing audio accurately and efficiently is a common and critical task. Whether you're processing interviews, meetings, podcasts, or voice commands, having a flexible tool that can leverage different AI models and services is invaluable. This guide introduces **SAPAT (Simple Audio Processing And Transcription)**, a command-line utility designed to streamline this process for AI engineers.
+
+SAPAT allows you to easily switch between powerful transcription providers like OpenAI's Whisper API, Groq's high-speed inference, local Whisper models for offline processing, and Google Cloud Speech-to-Text for enterprise-grade accuracy.
+
+## What is SAPAT?
+
+SAPAT is a Python-based command-line interface (CLI) tool that abstracts away the complexities of integrating with various speech-to-text APIs and models. It provides a unified interface to:
+
+*   **Transcribe audio files**: Supports common audio formats like WAV, MP3, FLAC, OGG.
+*   **Choose your provider**: Seamlessly switch between OpenAI, Groq, local Whisper, and Google Cloud Speech-to-Text.
+*   **Specify language**: Optimize transcription for different languages.
+*   **Save output**: Directly save the transcribed text to a file.
+
+This tool is perfect for rapid prototyping, comparing transcription quality across different models, or integrating into automated workflows where flexibility in transcription backend is desired.
+
+## Key Features
+
+*   **Provider Agnostic**: Write your scripts once, switch providers with a flag.
+*   **High Performance Options**: Leverage Groq for speed or OpenAI/Google for accuracy.
+*   **Offline Capability**: Use local Whisper models when internet access is limited or for privacy concerns.
+*   **Simple Configuration**: Manage API keys and credentials via environment variables or CLI arguments.
+*   **Extensible Architecture**: Easily add new transcription providers by implementing a simple interface.
+
+## Getting Started: Installation and Basic Usage
+
+Let's get SAPAT up and running on your system.
+
+### Prerequisites
+
+*   Python 3.9+
+*   Git
+
+### 1. Clone the SAPAT Repository
+
+First, you'll need to get the SAPAT source code.
+

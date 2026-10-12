@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "sapat"
+version = "0.1.0"
+description = "Simple Audio Processing And Transcription (SAPAT)"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+openai = "^1.35.13"
+groq = "^0.9.0"
+whisper-timestamped = "^1.19.0" # For local Whisper
+google-cloud-speech = "^2.25.0" # New dependency for Google Cloud Speech-to-Text
+google-auth = "^2.30.0" # Required by google-cloud-speech
+google-api-core = "^2.19.0" # Required by google-cloud-speech
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+sapat = "sapat.cli:main"
